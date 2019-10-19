@@ -9,7 +9,7 @@
 import Foundation
 
 extension CGFloat {
-    // used to set as currency
+    // used to set as currency.
     func currency() -> String
     {
         let formatter = NumberFormatter()
