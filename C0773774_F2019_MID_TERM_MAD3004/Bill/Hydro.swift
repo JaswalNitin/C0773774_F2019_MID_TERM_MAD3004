@@ -27,14 +27,14 @@ class HydroClass: BillClass, IPrintPC {
     
     // MARK: - Life Cycle
     /// initializing the Internet Class
-    init(billId: Int, billDate: String, billAmount: Float, billType: String, companyName: String, dataUsed: Float) {
+    init(billId: Int, billDate: String, billAmount: Float, billType: String, agencyName: String, unitsConsumed: Float) {
         
         // initializing the Bill Class
         super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)
         
         //
-        self.name = companyName
-        self.data = dataUsed
+        self.name = agencyName
+        self.units = unitsConsumed
         
     }
     
