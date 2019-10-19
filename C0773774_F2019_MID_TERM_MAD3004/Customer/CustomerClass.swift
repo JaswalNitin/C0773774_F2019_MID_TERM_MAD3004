@@ -34,25 +34,17 @@ class CustomerClass: IPrintPC {
     
     /// this is used to store total bill amount of all bills
     var totalBillAmount = Float()
-    /// this is used to concat the "$" with the totalBillAmount
-    var strTotalBillAmount: String{
-        get {
-            let strResult = String(format:  "$%.2f", totalBillAmount)
-            return strResult
-        }
-    }
     
     /// this is the dictionary for all class of objects of all type of the bills.
     var billDict: [String : AnyObject]
     
     // MARK: - Life Cycle
     /// this is used to initialize all the properties of the customer class
-    init(cust_id: Int, first_name: String, last_name: String, cust_email: String, total_bill_Amnt: Float, bill_dict: [String : AnyObject]) {
+    init(cust_id: Int, first_name: String, last_name: String, cust_email: String, bill_dict: [String : AnyObject]) {
         self.id = cust_id
         self.firstName = first_name
         self.lastName = last_name
         self.email = cust_email
-        self.totalBillAmount = total_bill_Amnt
         self.billDict = bill_dict
     }
     
@@ -70,7 +62,6 @@ class CustomerClass: IPrintPC {
                   """
         print(str)
         
-        var total = Float()
         for (key, value) in self.billDict {
             
             switch key {
@@ -79,22 +70,27 @@ class CustomerClass: IPrintPC {
                 (value as! InternetClass).displayData()
                 
                 // adding value to sumup total bill
-                total += (value as! InternetClass).amount
+                totalBillAmount += (value as! InternetClass).amount
             case "mobile":
                 // calling display for Internet class
                 (value as! MobileClass).displayData()
                 
                 // adding value to sumup total bill
-                total += (value as! MobileClass).amount
+                totalBillAmount += (value as! MobileClass).amount
             default:
-                print("hydro")
-                //(value as! NJHydroClass).displayData()
+                
+                // calling display for Internet class
+                (value as! HydroClass).displayData()
+                
+                // adding value to sumup total bill
+                totalBillAmount += (value as! HydroClass).amount
+
             }
             
         }
         
         print("******************************************")
-        let totalBillToPay = String(format: "        Total Bill Amount to Pay :$%.2f", total)
+        let totalBillToPay = String(format: "     Total Bill Amount to Pay :$%.2f", totalBillAmount)
         print(totalBillToPay)
         print("******************************************")
         

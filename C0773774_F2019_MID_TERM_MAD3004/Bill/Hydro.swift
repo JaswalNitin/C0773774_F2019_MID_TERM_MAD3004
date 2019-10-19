@@ -46,8 +46,8 @@ class HydroClass: BillClass, IPrintPC {
         
         // print local variables
         print("   Agency Name: ", self.name)
-        let data = self.final_data
-        print("   Unit Consumed: ", data)
+        let units = self.final_units
+        print("   Unit Consumed: ", units)
     }
     
 }

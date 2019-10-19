@@ -44,9 +44,9 @@ class InternetClass: BillClass, IPrintPC {
         super.printData()
         
         // print local variables
-        print("   Agency Name: ", self.name)
+        print("   Provider Name: ", self.name)
         let data = self.final_data
-        print("   Unit Consumed: ", data)
+        print("   Internet Usage: ", data)
     }
     
 }
