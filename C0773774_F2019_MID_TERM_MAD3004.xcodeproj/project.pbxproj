@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18873C21235BBBEE00745919 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C20235BBBEE00745919 /* main.swift */; };
 		18873C29235BBCF600745919 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C28235BBCF600745919 /* Protocol.swift */; };
+		18873C2C235BBD4100745919 /* BillClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C2B235BBD4100745919 /* BillClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		18873C1D235BBBEE00745919 /* C0773774_F2019_MID_TERM_MAD3004 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C0773774_F2019_MID_TERM_MAD3004; sourceTree = BUILT_PRODUCTS_DIR; };
 		18873C20235BBBEE00745919 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		18873C28235BBCF600745919 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		18873C2B235BBD4100745919 /* BillClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				18873C20235BBBEE00745919 /* main.swift */,
+				18873C2A235BBD2600745919 /* Bill */,
 				18873C27235BBCDC00745919 /* Helper */,
 			);
 			path = C0773774_F2019_MID_TERM_MAD3004;
@@ -71,6 +74,14 @@
 				18873C28235BBCF600745919 /* Protocol.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		18873C2A235BBD2600745919 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				18873C2B235BBD4100745919 /* BillClass.swift */,
+			);
+			path = Bill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +143,7 @@
 			files = (
 				18873C21235BBBEE00745919 /* main.swift in Sources */,
 				18873C29235BBCF600745919 /* Protocol.swift in Sources */,
+				18873C2C235BBD4100745919 /* BillClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
