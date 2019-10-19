@@ -23,4 +23,15 @@ class NJInternetClass: NJBillClass {
             return result
         }
     }
+    
+    // MARK: - Functions
+    init(billId: Int, billDate: String, billAmount: Float, billType: String, companyName: String, dtaUsed: Float) {
+        //
+        super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)
+        
+        self.name = companyName
+        self.data = dtaUsed
+    }
+    
+    //
 }
