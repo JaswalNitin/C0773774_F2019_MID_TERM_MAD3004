@@ -66,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				18873C20235BBBEE00745919 /* main.swift */,
+				18873C31235BC33300745919 /* Customer */,
 				18873C2A235BBD2600745919 /* Bill */,
 				18873C27235BBCDC00745919 /* Helper */,
 			);
@@ -88,6 +89,13 @@
 				18873C2F235BC15E00745919 /* MobileClass.swift */,
 			);
 			path = Bill;
+			sourceTree = "<group>";
+		};
+		18873C31235BC33300745919 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Customer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

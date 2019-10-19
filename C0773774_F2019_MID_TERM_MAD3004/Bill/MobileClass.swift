@@ -61,12 +61,21 @@ class MobileClass: BillClass, IPrintPC {
         
     }
     
-    
-    
+    // MARK: - Functions
+    /// this is used to print display
     func displayData() {
-        <#code#>
+        // displaying the parent class property
+        super.printData()
+        
+        print("Manufacturer Name: ", self.name)
+        print("Unit Consumed: ", self.plan)
+        print("Mobile Number : ", self.phoneNo)
+        self.strData = calData
+        print("Internet Usage : ", self.strData)
+        self.strMinutes = calMinutes
+        print("Minutes Usage : ", self.strMinutes)
+        
     }
-    
-
+   
 
 }
