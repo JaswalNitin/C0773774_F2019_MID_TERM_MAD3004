@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Entering Data
 // 1. enterning value of customer1 with 2 types of bill
 var internet1 = InternetClass(billId: 1, billDate: "Thursday, 24 January, 2019", billAmount: 336.00, billType: "Internet", companyName: "Bell", dataUsed: 10)
 var mobile1 = MobileClass(billId: 1, billDate: "Friday, 25 January, 2019", billAmount: 321.70, billType: "Mobile", comp_name: "Fido", plan_name: "Post Paid", phone_no: "231-453-6643", data_used: 20.40, minutes_used: 225)
@@ -31,15 +32,21 @@ var internet3 = InternetClass(billId: 2, billDate: "Monday, 10 May, 2019", billA
 
 let myDict3 = ["internet": internet3]
 
-var customer3 = CustomerClass(cust_id: 3, first_name: "Sassy", last_name: "Michale", cust_email: "sm44@gmail.com", bill_dict: myDict3)
+var customer3 = CustomerClass(cust_id: 5, first_name: "Sassy", last_name: "Michale", cust_email: "sm44@gmail.com", bill_dict: myDict3)
 
 let myCustomerArr: [AnyObject] = [customer1, customer2, customer3]
+let myCustomerSortedArr =  [AnyObject]()
 
-// printing customers list
+
+// MARK: - Printing Data
+// printing customers list for customer id = 1 and 5
 for i in 0..<myCustomerArr.count {
-    // calling display function of customer class
-    (myCustomerArr[i] as! CustomerClass).displayData()
+    
+    // calling display function of customer class to display detail for customer id = 1 and 5
+    if((myCustomerArr[i] as! CustomerClass).id == 1 || (myCustomerArr[i] as! CustomerClass).id == 5){
+        (myCustomerArr[i] as! CustomerClass).displayData()
+    }
+    
 }
 
-let search_id = 2
 
