@@ -9,7 +9,7 @@
 import Foundation
 
 /// this is the class to define the operation and values of Internet Bill
-class NJInternetClass: NJBillClass {
+class NJInternetClass: NJBillClass, IPrintPC {
 
     // MARK: - Properties
     /// this is the company name of Internet Bill
@@ -24,14 +24,29 @@ class NJInternetClass: NJBillClass {
         }
     }
     
-    // MARK: - Functions
-    init(billId: Int, billDate: String, billAmount: Float, billType: String, companyName: String, dtaUsed: Float) {
-        //
+    // MARK: - Life Cycle
+    /// initializing the Internet Class
+    init(billId: Int, billDate: String, billAmount: Float, billType: String, companyName: String, dataUsed: Float) {
+        
+        // initializing the Bill Class
         super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)
         
+        //
         self.name = companyName
-        self.data = dtaUsed
+        self.data = dataUsed
+        
     }
     
-    //
+    // MARK: - Functions
+    /// this is a protocol method to print data
+    func displayData() {
+        // print data of parent class(Bill Class)
+        super.printData()
+        
+        // print local variables
+        print("Agency Name: ", self.name)
+        let data = self.final_data
+        print("Unit Consumed: ", data)
+    }
+    
 }
