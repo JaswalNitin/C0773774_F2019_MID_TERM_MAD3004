@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CustomerClass {
+class CustomerClass: IPrintPC {
     
     // MARK: - Properties
     /// this is the customer id
@@ -44,4 +44,60 @@ class CustomerClass {
     
     /// this is the dictionary for all class of objects of all type of the bills.
     var billDict: [String : AnyObject]
+    
+    // MARK: - Life Cycle
+    /// this is used to initialize all the properties of the customer class
+    init(cust_id: Int, first_name: String, last_name: String, cust_email: String, total_bill_Amnt: Float, bill_dict: [String : AnyObject]) {
+        self.id = cust_id
+        self.firstName = first_name
+        self.lastName = last_name
+        self.email = cust_email
+        self.totalBillAmount = total_bill_Amnt
+        self.billDict = bill_dict
+    }
+    
+    // MARK: - Functions
+    /// this is used to display data of the class
+    func displayData() {
+        
+        self.fullName = calFull
+        print("Customer Id: ", self.id)
+        print("Customer Full Name: ", self.fullName)
+        print("Customer Email ID: ", self.email)
+        
+        let str = """
+                            ---- Bill Information ----
+                  """
+        print(str)
+        
+        var total = Float()
+        for (key, value) in self.billDict {
+            
+            switch key {
+            case "internet":
+                // calling display for Internet class
+                (value as! InternetClass).displayData()
+                
+                // adding value to sumup total bill
+                total += (value as! InternetClass).amount
+            case "mobile":
+                // calling display for Internet class
+                (value as! MobileClass).displayData()
+                
+                // adding value to sumup total bill
+                total += (value as! MobileClass).amount
+            default:
+                print("hydro")
+                //(value as! NJHydroClass).displayData()
+            }
+            
+        }
+        
+        print("******************************************")
+        let totalBillToPay = String(format: "        Total Bill Amount to Pay :$%.2f", total)
+        print(totalBillToPay)
+        print("******************************************")
+        
+        
+    }
 }
