@@ -61,33 +61,37 @@ class CustomerClass: IPrintPC {
                             ---- Bill Information ----
                   """
         print(str)
-        
-        for (key, value) in self.billDict {
-            
-            switch key {
-            case "internet":
-                // calling display for Internet class
-                (value as! InternetClass).displayData()
+        if(self.billDict.keys.count > 0){
+            for (key, value) in self.billDict {
                 
-                // adding value to sumup total bill
-                totalBillAmount += (value as! InternetClass).amount
-            case "mobile":
-                // calling display for Internet class
-                (value as! MobileClass).displayData()
-                
-                // adding value to sumup total bill
-                totalBillAmount += (value as! MobileClass).amount
-            default:
-                
-                // calling display for Internet class
-                (value as! HydroClass).displayData()
-                
-                // adding value to sumup total bill
-                totalBillAmount += (value as! HydroClass).amount
-
+                switch key {
+                case "internet":
+                    // calling display for Internet class
+                    (value as! InternetClass).displayData()
+                    
+                    // adding value to sumup total bill
+                    totalBillAmount += (value as! InternetClass).amount
+                case "mobile":
+                    // calling display for Internet class
+                    (value as! MobileClass).displayData()
+                    
+                    // adding value to sumup total bill
+                    totalBillAmount += (value as! MobileClass).amount
+                default:
+                    
+                    // calling display for Internet class
+                    (value as! HydroClass).displayData()
+                    
+                    // adding value to sumup total bill
+                    totalBillAmount += (value as! HydroClass).amount
+                    
+                }
             }
-            
+        }else{
+            print("~~~NOTE : This Customer has no bills")
+            print("******************************************")
         }
+       
         
         print("******************************************")
         let totalBillToPay = String(format: "     Total Bill Amount to Pay :$%.2f", totalBillAmount)
