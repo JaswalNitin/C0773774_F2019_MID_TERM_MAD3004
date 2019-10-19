@@ -13,7 +13,7 @@ class BillClass {
 
     // MARK: - Properties
     /// this is the id of bill
-    var id = Int()
+    var id = String()
     /// this is date of bill
     var date = String()
     /// this is the type of bill
@@ -35,7 +35,7 @@ class BillClass {
     }
     
     // MARK: - Life Cycle
-    init(bill_id: Int, bill_date: String, bill_amount: Float, bill_type: String) {
+    init(bill_id: String, bill_date: String, bill_amount: Float, bill_type: String) {
         self.id = bill_id
         self.date = bill_date
         self.type = bill_type

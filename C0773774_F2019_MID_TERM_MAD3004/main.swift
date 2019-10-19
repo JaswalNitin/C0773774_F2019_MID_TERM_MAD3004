@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - Entering Data
 // 1. enterning value of customer1 with 2 types of bill
-var internet1 = InternetClass(billId: 1, billDate: "Thursday, 24 January, 2019", billAmount: 336.00, billType: "Internet", companyName: "Bell", dataUsed: 10)
-var mobile1 = MobileClass(billId: 1, billDate: "Friday, 25 January, 2019", billAmount: 321.70, billType: "Mobile", comp_name: "Fido", plan_name: "Post Paid", phone_no: "231-453-6643", data_used: 20.40, minutes_used: 225)
+var internet1 = InternetClass(billId: "Inter001", billDate: "Thursday, 24 January, 2019", billAmount: 336.00, billType: "Internet", companyName: "Bell", dataUsed: 10)
+var mobile1 = MobileClass(billId: "Mobile001", billDate: "Friday, 25 January, 2019", billAmount: 321.70, billType: "Mobile", comp_name: "Fido", plan_name: "Post Paid", phone_no: "231-453-6643", data_used: 20.40, minutes_used: 225)
 
 
 let myDict1 = ["internet": internet1, "mobile": mobile1]
@@ -19,16 +19,16 @@ let myDict1 = ["internet": internet1, "mobile": mobile1]
 var customer1 = CustomerClass(cust_id: 1, first_name: "Nitin", last_name: "Jaswal", cust_email: "nitinjaswal44@gmail.com", bill_dict: myDict1)
 
 // 2. enterning value of customer2 with 3 types of bill
-var internet2 = InternetClass(billId: 2, billDate: "Monday, 10 June, 2018", billAmount: 406.00, billType: "Internet", companyName: "Giga", dataUsed: 60)
-var mobile2 = MobileClass(billId: 2, billDate: "Tuesday, 03 June, 2018", billAmount: 121.30, billType: "Mobile", comp_name: "Freedom", plan_name: "Post Paid", phone_no: "431-653-6703", data_used: 100.00, minutes_used: 840)
-var hydro2 = HydroClass(billId: 1, billDate: "Wednesday, 23 June, 2018", billAmount: 936.50, billType: "Hydro", agencyName: "NewTown-Hydro", unitsConsumed: 44.00)
+var internet2 = InternetClass(billId: "Internet002", billDate: "Monday, 10 June, 2018", billAmount: 406.00, billType: "Internet", companyName: "Giga", dataUsed: 60)
+var mobile2 = MobileClass(billId: "Mobile002", billDate: "Tuesday, 03 June, 2018", billAmount: 121.30, billType: "Mobile", comp_name: "Freedom", plan_name: "Post Paid", phone_no: "431-653-6703", data_used: 100.00, minutes_used: 840)
+var hydro2 = HydroClass(billId: "Hydro002", billDate: "Wednesday, 23 June, 2018", billAmount: 936.50, billType: "Hydro", agencyName: "NewTown-Hydro", unitsConsumed: 44.00)
 
 let myDict2 = ["internet": internet2, "mobile": mobile2, "hydro": hydro2]
 
 var customer2 = CustomerClass(cust_id: 2, first_name: "Rocky", last_name: "Lee", cust_email: "rklee@gmail.com", bill_dict: myDict2)
 
 // 3. enterning value of customer3 with 1 types of bill
-var internet3 = InternetClass(billId: 2, billDate: "Monday, 10 May, 2019", billAmount: 302.00, billType: "Internet", companyName: "SallyCom", dataUsed: 160)
+var internet3 = InternetClass(billId: "Internet003", billDate: "Monday, 10 May, 2019", billAmount: 302.00, billType: "Internet", companyName: "SallyCom", dataUsed: 160)
 
 let myDict3 = ["internet": internet3]
 

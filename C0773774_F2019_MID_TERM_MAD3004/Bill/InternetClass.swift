@@ -26,7 +26,7 @@ class InternetClass: BillClass, IPrintPC {
     
     // MARK: - Life Cycle
     /// initializing the Internet Class
-    init(billId: Int, billDate: String, billAmount: Float, billType: String, companyName: String, dataUsed: Float) {
+    init(billId: String, billDate: String, billAmount: Float, billType: String, companyName: String, dataUsed: Float) {
         
         // initializing the Bill Class
         super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)

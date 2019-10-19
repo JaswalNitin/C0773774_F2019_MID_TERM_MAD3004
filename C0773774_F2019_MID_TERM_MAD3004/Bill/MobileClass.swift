@@ -47,7 +47,7 @@ class MobileClass: BillClass, IPrintPC {
     
     // MARK: - Life Cycle
     /// this is used to initialize the properties of self classes and parent class
-    init(billId: Int, billDate: String, billAmount: Float, billType: String, comp_name: String, plan_name: String, phone_no: String, data_used: Float, minutes_used: Int) {
+    init(billId: String, billDate: String, billAmount: Float, billType: String, comp_name: String, plan_name: String, phone_no: String, data_used: Float, minutes_used: Int) {
         
         // initializing the Bill Class
         super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)
