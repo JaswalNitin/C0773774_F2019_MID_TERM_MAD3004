@@ -8,15 +8,23 @@
 
 import Foundation
 
-extension CGFloat {
+extension Float {
     // used to set as currency.
     func currency() -> String
     {
+        // https://stackoverflow.com/questions/41558832/how-to-format-a-double-into-currency-swift-3
         let formatter = NumberFormatter()
-        formatter.locale = Locale.current // Change this to another locale if you want to force a specific locale, otherwise this is redundant as the current locale is the default already
+        formatter.locale = Locale(identifier: "en_US") 
         formatter.numberStyle = .currency
-        let formattedTipAmount = formatter.string(from: self as NSNumber)
-        let strAmount = String(format: "%@", formattedTipAmount!)
-        return strAmount
+        let formatmount = formatter.string(from: self as NSNumber)
+        let result = String(format: "%@", formatmount!)
+        return result
+    }
+    
+    // used to set as Units Usage.
+    func unitsUsage() -> String
+    {
+        let result = String(format: "%.2f MW", self)
+        return result
     }
 }

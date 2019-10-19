@@ -94,7 +94,9 @@ class CustomerClass: IPrintPC {
        
         
         print("******************************************")
-        let totalBillToPay = String(format: "     Total Bill Amount to Pay :$%.2f", totalBillAmount)
+        var totalBillToPay = String()
+        totalBillToPay = totalBillAmount.currency()
+        totalBillToPay = String(format: "     Total Bill Amount to Pay : %@", totalBillToPay)
         print(totalBillToPay)
         print("******************************************")
         
