@@ -41,5 +41,21 @@ class NJBillClass {
         self.type = bill_type
         self.amount = bill_amount
     }
+    
+    // MARK: - Functions
+    func printData() {
+        
+        let str = """
+                  ******************************************
+                  """
+        print(str)
+        
+        print("Bill Id: ", self.id)
+        print("Bill Date: ", self.date)
+        print("Bill Type: ", self.type)
+        self.finalAmount = calFinalAmount
+        print("Bill Amount: ", self.finalAmount)
+        
+    }
 
 }
