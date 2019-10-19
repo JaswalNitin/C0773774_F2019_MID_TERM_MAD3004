@@ -33,5 +33,13 @@ class NJBillClass {
             finalAmount = newValue
         }
     }
+    
+    // MARK: - Life Cycle
+    init(bill_id: Int, bill_date: String, bill_amount: Float, bill_type: String) {
+        self.id = bill_id
+        self.date = bill_date
+        self.type = bill_type
+        self.amount = bill_amount
+    }
 
 }
