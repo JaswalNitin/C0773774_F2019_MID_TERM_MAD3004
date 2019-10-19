@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// this class is used to define the operation and values of Mobile Bill
 class MobileClass: BillClass, IPrintPC {
     
     // MARK: - Properties
@@ -41,6 +42,23 @@ class MobileClass: BillClass, IPrintPC {
         }set(finalMin){
             strMinutes = finalMin
         }
+    }
+    
+    
+    // MARK: - Life Cycle
+    /// this is used to initialize the properties of self classes and parent class
+    init(billId: Int, billDate: String, billAmount: Float, billType: String, comp_name: String, plan_name: String, phone_no: String, data_used: Float, minutes_used: Int) {
+        
+        // initializing the Bill Class
+        super.init(bill_id: billId, bill_date: billDate, bill_amount: billAmount, bill_type: billType)
+        
+        //
+        self.name = comp_name
+        self.plan = plan_name
+        self.phoneNo = phone_no
+        self.data = data_used
+        self.minutes = minutes_used
+        
     }
     
     
