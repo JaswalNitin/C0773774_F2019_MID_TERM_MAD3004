@@ -13,14 +13,14 @@ import Foundation
 class HydroClass: BillClass, IPrintPC {
     
     // MARK: - Properties
-    /// this is the company name of Internet Bill
+    /// this is the agency name of Hydro Bill
     var name = String()
-    /// this is data used by customer in Internet Bill
-    var data = Float()
-    /// this is to concat the "Units" with data
-    var final_data: String {
+    /// this is units consumed by customer in Hydro Bill
+    var units = Float()
+    /// this is to concat the "MW" with units
+    var final_units: String {
         get {
-            let result = String(format: "%.2f Units", data)
+            let result = String(format: "%.2f MW", units)
             return result
         }
     }

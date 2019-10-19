@@ -50,11 +50,11 @@ class BillClass {
                   """
         print(str)
         
-        print("Bill Id: ", self.id)
-        print("Bill Date: ", self.date)
-        print("Bill Type: ", self.type)
+        print("   Bill Id: ", self.id)
+        print("   Bill Date: ", self.date)
+        print("   Bill Type: ", self.type)
         self.finalAmount = calFinalAmount
-        print("Bill Amount: ", self.finalAmount)
+        print("   Bill Amount: ", self.finalAmount)
         
     }
 
