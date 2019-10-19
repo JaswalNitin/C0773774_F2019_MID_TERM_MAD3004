@@ -9,7 +9,7 @@
 import Foundation
 
 /// this is the class to define the operation and values of Internet Bill
-class NJInternetClass: NJBillClass, IPrintPC {
+class InternetClass: BillClass, IPrintPC {
 
     // MARK: - Properties
     /// this is the company name of Internet Bill

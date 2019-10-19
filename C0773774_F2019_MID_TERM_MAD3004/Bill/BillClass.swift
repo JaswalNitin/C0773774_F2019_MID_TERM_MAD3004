@@ -9,7 +9,7 @@
 import Foundation
 
 /// This is a bill main class
-class NJBillClass {
+class BillClass {
 
     // MARK: - Properties
     /// this is the id of bill
