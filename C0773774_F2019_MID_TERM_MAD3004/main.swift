@@ -37,7 +37,6 @@ func isValidPhone(phoneNo:String) -> Bool {
 
 }
 
-
 // MARK: - Entering Data
 // 1. enterning value of customer1 with 2 types of bill
 var internet1 = InternetClass(billId: "Inter001", billDate: "Thursday, 24 January, 2019", billAmount: 336.00, billType: "Internet", companyName: "Bell", dataUsed: 10)
