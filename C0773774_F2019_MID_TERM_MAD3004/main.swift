@@ -10,12 +10,18 @@ import Foundation
 
 
 // MARK: - Functions
+enum MyError: Error {
+    case runtimeError(String)
+}
 /// this checks if email valid or not
-func isValidEmail(emailStr:String) -> Bool {
+func isValidEmail(emailStr:String) throws -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     
     let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
     let result = emailPred.evaluate(with: emailStr)
+    if(result == true){ }else{
+        throw MyError.runtimeError("Invalid email")
+    }
     
     return result
 }
@@ -45,7 +51,7 @@ let myDict1 = ["internet": internet1, "mobile": mobile1]
 
 // checking if email valid or not
 var email1 = "nitinjaswal44@gmail.com"
-if(isValidEmail(emailStr: email1) ){}else{
+if(try isValidEmail(emailStr: email1) ){}else{
     email1 = "Invalid email"
 }
 
@@ -65,7 +71,7 @@ let myDict2 = ["internet": internet2, "mobile": mobile2, "hydro": hydro2]
 
 // checking if email valid or not
 var email2 = "rklee@gmail.com"
-if(isValidEmail(emailStr: email2) ){}else{
+if(try isValidEmail(emailStr: email2) ){}else{
     email2 = "Invalid email"
 }
 var customer2 = CustomerClass(cust_id: 2, first_name: "Rocky", last_name: "Lee", cust_email: email2, bill_dict: myDict2)
@@ -77,7 +83,7 @@ let myDict3 = ["internet": internet3]
 
 // checking if email valid or not
 var email3 = "sm44@gmail.com"
-if(isValidEmail(emailStr: email3) ){}else{
+if(try isValidEmail(emailStr: email3) ){}else{
     email3 = "Invalid email"
 }
 
