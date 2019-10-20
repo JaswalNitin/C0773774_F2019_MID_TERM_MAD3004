@@ -8,30 +8,34 @@
 
 import Foundation
 
-
-class IsuranceClass { //:  IPrintP
+class InsuranceClass: IPrintPC {
     
-//    // MARK: - Properties
-//    var name = String()
-//
-//    var data = Float()
+    // MARK: - Properties
     
+    var providName = String()
+    var type = String()
+    var startDate = String()
+    var endDate = String()
+    var totaDays = Int()
     
     
     // MARK: - Life Cycle
     /// initializing the Internet Class
-    
+    init(providName: providName, type ){
+        
+    }
     
     // MARK: - Functions
-//    /// this is a protocol method to print data
-//    func displayData() {
-//        // print data of parent class(Bill Class)
-//        super.printData()
-//
-//        // print local variables
-//        print("   Provider Name: ", self.name)
-//        let data = self.final_data
-//        print("   Internet Usage: ", data)
-//    }
+    /// this is a protocol method to print data
+    func displayData() {
+        // print data of parent class(Bill Class)
+        super.printData()
+        
+        // print local variables
+        print("   Provider Name: ", self.name)
+        let data = self.final_data
+        print("   Internet Usage: ", data)
+    }
     
 }
+
