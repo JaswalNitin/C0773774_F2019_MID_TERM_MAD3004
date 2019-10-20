@@ -30,6 +30,7 @@ func isValidEmail(emailStr:String) throws -> Bool {
 func isValidPhone(phoneNo:String) -> Bool {
   
     if(phoneNo.count == 10){
+        
         return true
     }else{
         return false
