@@ -45,6 +45,9 @@ class CustomerClass: IPrintPC {
         self.firstName = first_name
         self.lastName = last_name
         self.email = cust_email
+        
+        
+        
         self.billDict = bill_dict
     }
     
