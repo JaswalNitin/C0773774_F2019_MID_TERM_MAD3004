@@ -28,6 +28,7 @@ func isValidEmail(emailStr:String) throws -> Bool {
 
 /// this checks if email valid or not
 func isValidPhone(phoneNo:String) -> Bool {
+  
     if(phoneNo.count == 10){
         return true
     }else{
