@@ -15,6 +15,7 @@
 		18873C33235BC38900745919 /* CustomerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C32235BC38900745919 /* CustomerClass.swift */; };
 		18873C35235BC65200745919 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C34235BC65200745919 /* Hydro.swift */; };
 		18873C38235BD26900745919 /* ExtensionsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C37235BD26900745919 /* ExtensionsClass.swift */; };
+		18873C3B235BDF0000745919 /* InsuranceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18873C3A235BDF0000745919 /* InsuranceClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		18873C32235BC38900745919 /* CustomerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerClass.swift; sourceTree = "<group>"; };
 		18873C34235BC65200745919 /* Hydro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
 		18873C37235BD26900745919 /* ExtensionsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsClass.swift; sourceTree = "<group>"; };
+		18873C3A235BDF0000745919 /* InsuranceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				18873C20235BBBEE00745919 /* main.swift */,
 				18873C31235BC33300745919 /* Customer */,
 				18873C2A235BBD2600745919 /* Bill */,
+				18873C39235BDEEA00745919 /* Insurance */,
 				18873C27235BBCDC00745919 /* Helper */,
 				18873C36235BD1D700745919 /* Extensions */,
 			);
@@ -113,6 +116,14 @@
 				18873C37235BD26900745919 /* ExtensionsClass.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18873C39235BDEEA00745919 /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				18873C3A235BDF0000745919 /* InsuranceClass.swift */,
+			);
+			path = Insurance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				18873C35235BC65200745919 /* Hydro.swift in Sources */,
 				18873C30235BC15E00745919 /* MobileClass.swift in Sources */,
 				18873C21235BBBEE00745919 /* main.swift in Sources */,
+				18873C3B235BDF0000745919 /* InsuranceClass.swift in Sources */,
 				18873C2E235BBE4400745919 /* InternetClass.swift in Sources */,
 				18873C29235BBCF600745919 /* Protocol.swift in Sources */,
 				18873C33235BC38900745919 /* CustomerClass.swift in Sources */,
