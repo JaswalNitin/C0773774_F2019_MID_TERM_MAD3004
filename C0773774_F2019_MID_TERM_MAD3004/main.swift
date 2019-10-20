@@ -95,7 +95,7 @@ let myCustomerSortedArr =  [AnyObject]()
 
 
 // MARK: - Printing Data
-// printing customers list for customer id = 1 and 5
+// printing customers list for customer id = 1 and 5 
 for i in 0..<myCustomerArr.count {
     
     // calling display function of customer class to display detail for customer id = 1 and 5
